@@ -1,0 +1,57 @@
+<chapter>
+	<title>A2: Clientes ligeros.</title>
+	<para>Esta práctica constará de los siguientes apartados:
+		<itemizedlist>
+                <listitem>1. Clientes ligeros.</listitem>
+                <listitem>2. Preparación de las máquinas cliente y servidor.</listitem>
+                <listitem>3. Instalación y configuración del servidor.</listitem>
+                <listitem>4. Notas finales.</listitem>
+        </itemizedlist>
+	</para>
+	<section>
+		<title>1. Clientes ligeros</title>
+		<para>Un cliente liviano o cliente delgado (thin client o slim client en inglés) es una computadora 
+		cliente o un software de cliente en una arquitectura de red cliente-servidor que depende primariamente 
+		del servidor central para las tareas de procesamiento, y se enfoca principalmente en transportar la 
+		entrada y la salida entre el usuario y el servidor remoto.</para>
+	</section>
+	<section>
+		<title>2. Preparación de las máquinas cliente y servidor.</title>
+		<para>Para la preparación del <command>cliente</command> nos bastará con crear una máquina virtual vacía, sin disco duro 
+		ni lector de CD/DVD. Estableciendo que se conecte preferentemente por Disquetera y Red.</para>
+		<para>Para el <command>servidor</command> instalaremos una máquina con Ubuntu con los siguientes parámetros:
+		<itemizedlist>
+                <listitem>Nombre de usuario: nombre-del-alumno, en minúsculas, sin tildes ni eñes. Poner como clave el 
+                DNI con la letra en minúsculas.</listitem>
+                <listitem>Clave de root el DNI con la letra en minúsculas.</listitem>
+                <listitem>Poner como nombre de equipo el primer apellido del alumno en minúsculas y sin tildes.</listitem>
+                <listitem>Poner como nombre de dominio el segundo apellido del alumno en minúsculas y sin tildes.</listitem>
+                <listitem>Crear 3 usuarios locales llamados: primer apellido del alumno 1, 2 y 3.</listitem>
+                <listitem>En <quote>/etc/network/interfaces</quote> configuraremos la IP de manera estática.</listitem>
+        </itemizedlist></para>
+	</section>
+	<section>
+		<title>3. Instalación y configuración del servidor.</title>
+		<para>Para instalar el servidor LTSP escribiremos lo siguiente en la terminal: <command>sudo apt-get install 
+		ltsp-server-standalone</command> y para crear la imagen que usarán los clientes: <command>sudo ltsp-build-client</command>.</para>
+		<para>Pero para que funcione todo correctamente no bastará con dejar todos los parámetros por defecto, habrá que modificar 
+		los siguientes archivos:
+		<itemizedlist>
+                <listitem>En <quote>/etc/NetworkManager/NetworkManager.conf</quote> en <command>managed</command> se establecerá 
+                como <quote>true</quote>.</listitem>
+                <listitem>En <quote>/etc/ltsp/dhcpd.conf</quote> en <command>option domain-name</command> habrá que poner el que establecimos en 
+                <quote>/etc/resolv.conf</quote>. En este caso <quote>herrera</quote>.</listitem>
+                <listitem>Y en <quote>/etc/default/isc-dhcp-server</quote> la interfaz usada, en este caso <quote>eth0</quote>.</listitem>
+                <listitem>Por último reiniciamos los servicios <quote>/etc/init.d/isc-dhcp-server</quote> y 
+                <quote>/etc/init.d/tftpd-hpa</quote></listitem>
+        </itemizedlist></para>
+	</section>
+	<section>
+		<title>4. Notas finales.</title>
+		<para>Cuando esté todo configurado, iniciamos la máquina cliente (obviamente con el servidor LTSP funcionando) 
+		escribimos nuestro usuario y contraseña (sin contraseña no deja acceder) y nuestro cliente conectará sin problemas.</para>
+		<para>En caso de que nuestros usuarios no tengan contraseña se puede establecer una sin necesidad de crear una nueva imagen. 
+		Lo mismo ocurrirá en la creación de usuarios.</para>
+		<para>La salida del comando <quote>arp</quote> y todo lo comentado anteriormente se ve detalladamente en el siguiente <ulink url="http://youtu.be/1p-sNuym8z4">vídeo:</ulink>.</para>
+	</section>
+</chapter>

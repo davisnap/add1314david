@@ -11,7 +11,7 @@
 	</para>
 	
 	<section>
-		<title>1.Introducción.</title>
+		<title>1. Introducción.</title>
 		<para>Para realizar esta práctica vamos a usar los siguientes SS.OO.:
 		<itemizedlist>
 			<listitem>Windows 2008 Server.</listitem>
@@ -24,7 +24,7 @@
 		<para>Para evitar conflictos se configuran las IPs de las máquinas virtuales como estáticas.</para>
 	</section>
 	<section>
-		<title>2.Escritorio remoto con VNC.</title>
+		<title>2. Escritorio remoto con VNC.</title>
 		<section>
 			<title>Windows.</title>
 			<para>Para realizar la práctica en Windows bastará con instalar VNC en Windows 2008 Server como servidor 
@@ -34,7 +34,7 @@
 				<title>Windows a Windows.</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/vnc/005 CONECTADO AL SERVER.PNG" format="PNG" align="center" scale="50" />
+					<imagedata fileref="img/t1/a1/vnc/005 CONECTADO AL SERVER.PNG" format="PNG" align="center" scale="50" />
 				</imageobject>
 				<textobject>
 					<phrase>Windows a Windows.</phrase>
@@ -48,7 +48,7 @@
 				<title>Windows a Linux.</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/vnc/Imagen 4.jpg" format="JPG" align="center" scale="150" />
+					<imagedata fileref="img/t1/a1/vnc/Imagen 4.jpg" format="JPG" align="center" scale="150" />
 				</imageobject>
 				<textobject>
 					<phrase>Windows a Linux.</phrase>
@@ -71,7 +71,7 @@
 				<title>Linux a Linux.</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/vnc/008 CONECTADO AL SERVIDOR.PNG" format="PNG" align="center" scale="50" />
+					<imagedata fileref="img/t1/a1/vnc/008 CONECTADO AL SERVIDOR.PNG" format="PNG" align="center" scale="50" />
 				</imageobject>
 				<textobject>
 					<phrase>Linux a Linux.</phrase>
@@ -85,7 +85,7 @@
 				<title>Linux a Windows.</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/vnc/009 de linux a windows VNC.PNG" format="PNG" align="center" scale="50" />
+					<imagedata fileref="img/t1/a1/vnc/009 de linux a windows VNC.PNG" format="PNG" align="center" scale="50" />
 				</imageobject>
 				<textobject>
 					<phrase>Linux a Windows.</phrase>
@@ -108,7 +108,7 @@
 				<title>Windows a Windows.</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/accre/101 win a win.png" format="PNG" align="center" scale="50" />
+					<imagedata fileref="img/t1/a1/accre/101 win a win.png" format="PNG" align="center" scale="50" />
 				</imageobject>
 				<textobject>
 					<phrase>Windows a Windows.</phrase>
@@ -128,7 +128,7 @@
 				<title>Linux a Linux.</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/accre/102 linux a linux.png" format="PNG" align="center" scale="50" />
+					<imagedata fileref="img/t1/a1/accre/102 linux a linux.png" format="PNG" align="center" scale="50" />
 				</imageobject>
 				<textobject>
 					<phrase>Linux a Linux.</phrase>
@@ -146,7 +146,7 @@
 				<title>Linux a Windows.</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/accre/103 linux a win RDP.png" format="PNG" align="center" scale="50" />
+					<imagedata fileref="img/t1/a1/accre/103 linux a win RDP.png" format="PNG" align="center" scale="50" />
 				</imageobject>
 				<textobject>
 					<phrase>Linux a Windows.</phrase>
@@ -167,7 +167,7 @@
 				<title>Instalando TS.</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/ts/200 instalado terminal server.png" format="PNG" align="center" scale="50" />
+					<imagedata fileref="img/t1/a1/ts/200 instalado terminal server.png" format="PNG" align="center" scale="50" />
 				</imageobject>
 				<textobject>
 					<phrase>Instalando TS.</phrase>
@@ -184,7 +184,7 @@
 				<title>Funcionando..</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/ts/202 ACCESO REMOTO A TERMINAL SERVER.PNG" format="PNG" align="center" scale="50" />
+					<imagedata fileref="img/t1/a1/ts/202 ACCESO REMOTO A TERMINAL SERVER.PNG" format="PNG" align="center" scale="50" />
 				</imageobject>
 				<textobject>
 					<phrase>Funcionando.</phrase>
@@ -199,7 +199,7 @@
 				<title>Configurando conexión.</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/ts/203 knoppix aplica.png" format="PNG" align="center" scale="50" />
+					<imagedata fileref="img/t1/a1/ts/203 knoppix aplica.png" format="PNG" align="center" scale="50" />
 				</imageobject>
 				<textobject>
 					<phrase>Configurando conexión.</phrase>
@@ -214,7 +214,7 @@
 				<title>Configurando la ruta.</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/ts/204 APP.PNG" format="PNG" align="center" scale="50" />
+					<imagedata fileref="img/t1/a1/ts/204 APP.PNG" format="PNG" align="center" scale="50" />
 				</imageobject>
 				<textobject>
 					<phrase>Configurando la ruta.</phrase>
@@ -229,7 +229,7 @@
 				<title>No conecta.</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/ts/205 NO DEJA ENTRAR.PNG" format="PNG" align="center" scale="50" />
+					<imagedata fileref="img/t1/a1/ts/205 NO DEJA ENTRAR.PNG" format="PNG" align="center" scale="50" />
 				</imageobject>
 				<textobject>
 					<phrase>No conecta.</phrase>
@@ -243,7 +243,7 @@
 				<title>Problema con licencias.</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/ts/206.png" format="PNG" align="center" scale="50" />
+					<imagedata fileref="img/t1/a1/ts/206.png" format="PNG" align="center" scale="50" />
 				</imageobject>
 				<textobject>
 					<phrase>Problema con licencias.</phrase>
@@ -264,7 +264,7 @@
 				<title>Habilitar funciones.</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/reapp/300b.png" format="PNG" align="center" scale="50" />
+					<imagedata fileref="img/t1/a1/reapp/300b.png" format="PNG" align="center" scale="50" />
 				</imageobject>
 				<textobject>
 					<phrase>Habilitar funciones.</phrase>
@@ -279,7 +279,7 @@
 				<title>Aplicaciones a usar.</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/reapp/300 APLICACIONES.PNG" format="PNG" align="center" scale="50" />
+					<imagedata fileref="img/t1/a1/reapp/300 APLICACIONES.PNG" format="PNG" align="center" scale="50" />
 				</imageobject>
 				<textobject>
 					<phrase>Aplicaciones a usar.</phrase>
@@ -294,7 +294,7 @@
 				<title>Creación de archivos RDP.</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/reapp/301.png" format="PNG" align="center" scale="50" />
+					<imagedata fileref="img/t1/a1/reapp/301.png" format="PNG" align="center" scale="50" />
 				</imageobject>
 				<textobject>
 					<phrase>Creación de archivos RDP.</phrase>
@@ -309,7 +309,7 @@
 				<title>Paint.</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/reapp/302.png" format="PNG" align="center" scale="50" />
+					<imagedata fileref="img/t1/a1/reapp/302.png" format="PNG" align="center" scale="50" />
 				</imageobject>
 				<textobject>
 					<phrase>Paint.</phrase>
@@ -323,7 +323,7 @@
 				<title>Iniciando calculadora.</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/reapp/303.png" format="PNG" align="center" scale="50" />
+					<imagedata fileref="img/t1/a1/reapp/303.png" format="PNG" align="center" scale="50" />
 				</imageobject>
 				<textobject>
 					<phrase>Iniciando calculadora.</phrase>
@@ -337,7 +337,7 @@
 				<title>Calculadora.</title>
 				<mediaobject>
 				<imageobject>
-					<imagedata fileref="img/t1a1/reapp/304.png" format="PNG" align="center" scale="50" />
+					<imagedata fileref="img/t1/a1/reapp/304.png" format="PNG" align="center" scale="50" />
 				</imageobject>
 				<textobject>
 					<phrase>Calculadora.</phrase>
