@@ -21,6 +21,7 @@
 			</itemizedlist>
 		</para>
 	</section>
+	
 	<section>
 		<title>2. Instalación básica.</title>
 		<section>
@@ -294,9 +295,256 @@
 				</caption>
 				</mediaobject>
 			</figure>
+			<figure id="19">
+				<title>Conexión desde Windows.</title>
+				<mediaobject>
+				<imageobject>
+					<imagedata fileref="../img/t1/a3/yeray/PARTE2/6windows.png" format="PNG" align="center" scale="50" />
+				</imageobject>
+				<textobject>
+					<phrase>Conexión desde Windows.</phrase>
+				</textobject>
+				<caption>
+					<para>Conexión desde cliente Windows usando PuTTY.</para>
+				</caption>
+				</mediaobject>
+			</figure>
+			<figure id="20">
+				<title>known_hosts.</title>
+				<mediaobject>
+				<imageobject>
+					<imagedata fileref="../img/t1/a3/yeray/PARTE2/sshclient1.2.png" format="PNG" align="center" scale="50" />
+				</imageobject>
+				<textobject>
+					<phrase>known_hosts.</phrase>
+				</textobject>
+				<caption>
+					<para>Comprobando el fichero known_hosts.</para>
+				</caption>
+				</mediaobject>
+			</figure>
+			<figure id="21">
+				<title>Generando nueva clave.</title>
+				<mediaobject>
+				<imageobject>
+					<imagedata fileref="../img/t1/a3/yeray/PARTE2/sshserverkey.png" format="PNG" align="center" scale="50" />
+				</imageobject>
+				<textobject>
+					<phrase>Generando nueva clave.</phrase>
+				</textobject>
+				<caption>
+					<para>Generando una nueva clave SSH.</para>
+				</caption>
+				</mediaobject>
+			</figure>
 		</section>
 		<section>
 			<title>Con servidor OpenSuse.</title>
+			<para>Se realiza de la misma forma.</para>
+		</section>
+	</section>
+	<section>
+		<title>3. Personalización del prompt Bash.</title>
+		<section>
+			<title>Servidor Debian 7</title>
+			<figure id="22">
+				<title>Personalizando Bash.</title>
+				<mediaobject>
+				<imageobject>
+					<imagedata fileref="../img/t1/a3/yeray/PARTE3/sshbash.png" format="PNG" align="center" scale="50" />
+				</imageobject>
+				<textobject>
+					<phrase>Personalizando Bash.</phrase>
+				</textobject>
+				<caption>
+					<para>Generando una nueva clave SSH.</para>
+				</caption>
+				</mediaobject>
+			</figure>
+		</section>
+		<section>
+			<title>Servidor OpenSuse.</title>
+			<para>Se realiza de la misma forma.</para>
+		</section>
+	</section>
+	<section>
+		<title>4. Autenticación mediante claves públicas.</title>
+		<section>
+			<title>Servidor Debian 7.</title>
+			<figure id="23">
+				<title>Generando clave SSH.</title>
+				<mediaobject>
+				<imageobject>
+					<imagedata fileref="../img/t1/a3/yeray/PARTE4/7clave en el cliente.png" format="PNG" align="center" scale="50" />
+				</imageobject>
+				<textobject>
+					<phrase>Generando clave SSH.</phrase>
+				</textobject>
+				<caption>
+					<para>Generando una nueva clave SSH.</para>
+				</caption>
+				</mediaobject>
+			</figure>
+			<figure id="24">
+				<title>Copiando clave.</title>
+				<mediaobject>
+				<imageobject>
+					<imagedata fileref="../img/t1/a3/yeray/PARTE4/8insertarclave.png" format="PNG" align="center" scale="50" />
+				</imageobject>
+				<textobject>
+					<phrase>Copiando clave.</phrase>
+				</textobject>
+				<caption>
+					<para>Se copia la clave al servidor.</para>
+				</caption>
+				</mediaobject>
+			</figure>
+			<figure id="25">
+				<title>Conectando sin contraseña.</title>
+				<mediaobject>
+				<imageobject>
+					<imagedata fileref="../img/t1/a3/yeray/PARTE4/9iniciarsshuser.png" format="PNG" align="center" scale="50" />
+				</imageobject>
+				<textobject>
+					<phrase>Conectando sin contraseña.</phrase>
+				</textobject>
+				<caption>
+					<para>Se conecta sin necesidad de insertar la contraseña.</para>
+				</caption>
+				</mediaobject>
+			</figure>
+		</section>
+		<section>
+			<title>Servidor OpenSuse.</title>
+			<para>Se realiza de la misma forma.</para>
+		</section>
+	</section>
+	<section>
+		<title>5. Uso de SSH como túnel para X.</title>
+		<section>
+			<title>Servidor Debian 7.</title>
+			<figure id="26">
+				<title>Instalando Geany.</title>
+				<mediaobject>
+				<imageobject>
+					<imagedata fileref="../img/t1/a3/yeray/PARTE5/10instalar geany.png" format="PNG" align="center" scale="50" />
+				</imageobject>
+				<textobject>
+					<phrase>Instalando Geany.</phrase>
+				</textobject>
+				<caption>
+					<para>Instalando Geany en el servidor.</para>
+				</caption>
+				</mediaobject>
+			</figure>
+			<figure id="27">
+				<title>Conexión SSH con ejecución.</title>
+				<mediaobject>
+				<imageobject>
+					<imagedata fileref="../img/t1/a3/yeray/PARTE5/11sshtunel.png" format="PNG" align="center" scale="50" />
+				</imageobject>
+				<textobject>
+					<phrase>Conexión SSH con ejecución.</phrase>
+				</textobject>
+				<caption>
+					<para>Conexión SSH con parámetro -X para ejecutar aplicaciones que se encuentran en el servidor.</para>
+				</caption>
+				</mediaobject>
+			</figure>
+			<figure id="28">
+				<title>Aplicación abierta.</title>
+				<mediaobject>
+				<imageobject>
+					<imagedata fileref="../img/t1/a3/yeray/PARTE5/12iniciargeany.png" format="PNG" align="center" scale="50" />
+				</imageobject>
+				<textobject>
+					<phrase>Aplicación abierta.</phrase>
+				</textobject>
+				<caption>
+					<para>Aplicación funcionando desde el cliente.</para>
+				</caption>
+				</mediaobject>
+			</figure>
+		</section>
+		<section>
+			<title>Servidor OpenSuse.</title>
+			<para>Se realiza de la misma forma.</para>
+		</section>
+	</section>
+	<section>
+		<title>6. Aplicaciones Windows nativas.</title>
+		<section>
+			<title>Servidor Debian 7</title>
+			<figure id="29">
+				<title>Instalando Wine.</title>
+				<mediaobject>
+				<imageobject>
+					<imagedata fileref="../img/t1/a3/yeray/PARTE6/instalar wine.png" format="PNG" align="center" scale="50" />
+				</imageobject>
+				<textobject>
+					<phrase>Instalando Wine.</phrase>
+				</textobject>
+				<caption>
+					<para>Instalando Wine para poder emular aplicaciones de Windows en Linux.</para>
+				</caption>
+				</mediaobject>
+			</figure>
+			<figure id="30">
+				<title>Emulando Bloc de notas.</title>
+				<mediaobject>
+				<imageobject>
+					<imagedata fileref="../img/t1/a3/yeray/PARTE6/winedesde servidor.png" format="PNG" align="center" scale="50" />
+				</imageobject>
+				<textobject>
+					<phrase>Emulando Bloc de notas.</phrase>
+				</textobject>
+				<caption>
+					<para>Emulando Bloc de notas desde el servidor.</para>
+				</caption>
+				</mediaobject>
+			</figure>
+			<figure id="31">
+				<title>Emulando Bloc de notas.</title>
+				<mediaobject>
+				<imageobject>
+					<imagedata fileref="../img/t1/a3/yeray/PARTE6/wine desdeclirntr.png" format="PNG" align="center" scale="50" />
+				</imageobject>
+				<textobject>
+					<phrase>Emulando Bloc de notas.</phrase>
+				</textobject>
+				<caption>
+					<para>Emulando Bloc de notas desde el cliente.</para>
+				</caption>
+				</mediaobject>
+			</figure>
+		</section>
+		<section>
+			<title>Servidor OpenSuse.</title>
+			<para>Se realiza de la misma forma.</para>
+		</section>
+	</section>
+	<section>
+		<title>7. Restricciones de uso.</title>
+		<section>
+			<title>Servidor Debian 7.</title>
+			<figure id="32">
+				<title>Aplicación abierta.</title>
+				<mediaobject>
+				<imageobject>
+					<imagedata fileref="../img/t1/a3/yeray/PARTE7/12iniciargeany.png" format="PNG" align="center" scale="50" />
+				</imageobject>
+				<textobject>
+					<phrase>Aplicación abierta.</phrase>
+				</textobject>
+				<caption>
+					<para>Aplicación funcionando desde el cliente.</para>
+				</caption>
+				</mediaobject>
+			</figure>
+		</section>
+		<section>
+			<title>Servidor OpenSuse.</title>
+			<para>Se realiza de la misma forma.</para>
 		</section>
 	</section>
 </chapter>
