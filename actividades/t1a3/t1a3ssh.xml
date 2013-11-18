@@ -1,0 +1,302 @@
+<chapter>
+	<title>A3: Acceso remoto SSH.</title>
+	<para>Esta práctica constará de los siguientes apartados:
+		<itemizedlist>
+                <listitem>1. Preparativos.</listitem>
+                <listitem>2. Instalación básica.</listitem>
+                <listitem>3. Personalización del prompt Bash.</listitem>
+                <listitem>4. Autenticación mediante claves públicas.</listitem>
+                <listitem>5. Uso de SSH como túnel para X.</listitem>
+				<listitem>6. Aplicaciones Windows nativas.</listitem>
+				<listitem>7. Restricciones de uso.</listitem>
+        </itemizedlist>
+	</para>
+	
+	<section>
+		<title>1. Preparativos.</title>
+		<para>Para esta práctica usaremos:
+		<itemizedlist>
+			<listitem>Servidores: OpenSuse, Windows 2008 Server, ?¿.</listitem>
+			<listitem>Clientes: Windows 7 ¿?.</listitem>
+			</itemizedlist>
+		</para>
+	</section>
+	<section>
+		<title>2. Instalación básica.</title>
+		<section>
+			<title>Con servidor Windows 2008 Server.</title>
+				<section>
+					<title>Windows 2008 Server.</title>
+					<para>Instalar freeSSHd y configurarlo como se muestran en las imágenes. Si falla la conexión bastará con 
+					parar el servicio y cambiar el puerto.</para>
+					<figure id="01">
+						<title>Pestaña SSH.</title>
+						<mediaobject>
+						<imageobject>
+							<imagedata fileref="../img/t1/a3/david/01.png" format="PNG" align="center" scale="50" />
+						</imageobject>
+						<textobject>
+							<phrase>Pestaña SSH.</phrase>
+						</textobject>
+						<caption>
+							<para>Configuramos tal cual se ve la imagen y ponemos el puerto que deseemos.</para>
+						</caption>
+						</mediaobject>
+					</figure>
+					<figure id="02">
+						<title>Pestaña Authentication.</title>
+						<mediaobject>
+						<imageobject>
+							<imagedata fileref="../img/t1/a3/david/02.png" format="PNG" align="center" scale="50" />
+						</imageobject>
+						<textobject>
+							<phrase>Pestaña Authentication.</phrase>
+						</textobject>
+						<caption>
+							<para>En Password authentication ponemos 'Required'.</para>
+						</caption>
+						</mediaobject>
+					</figure>
+					<figure id="03">
+						<title>Pestaña Encryption.</title>
+						<mediaobject>
+						<imageobject>
+							<imagedata fileref="../img/t1/a3/david/03.png" format="PNG" align="center" scale="50" />
+						</imageobject>
+						<textobject>
+							<phrase>Pestaña Encryption.</phrase>
+						</textobject>
+						<caption>
+							<para>Elegimos AES256.</para>
+						</caption>
+						</mediaobject>
+					</figure>
+					<figure id="04">
+						<title>Pestaña SFTP.</title>
+						<mediaobject>
+						<imageobject>
+							<imagedata fileref="../img/t1/a3/david/04.png" format="PNG" align="center" scale="50" />
+						</imageobject>
+						<textobject>
+							<phrase>Pestaña SFTP.</phrase>
+						</textobject>
+						<caption>
+							<para>La carpeta a compartir, en nuestro caso el Escritorio.</para>
+						</caption>
+						</mediaobject>
+					</figure>
+					<figure id="05">
+						<title>Creación del usuario.</title>
+						<mediaobject>
+						<imageobject>
+							<imagedata fileref="../img/t1/a3/david/05.png" format="PNG" align="center" scale="50" />
+						</imageobject>
+						<textobject>
+							<phrase>Creación del usuario.</phrase>
+						</textobject>
+						<caption>
+							<para>Creamos el usuario y seleccionamos las tres pestañas.</para>
+						</caption>
+						</mediaobject>
+					</figure>
+					<figure id="06">
+						<title>Pestaña Logging.</title>
+						<mediaobject>
+						<imageobject>
+							<imagedata fileref="../img/t1/a3/david/06.png" format="PNG" align="center" scale="50" />
+						</imageobject>
+						<textobject>
+							<phrase>Pestaña Logging.</phrase>
+						</textobject>
+						<caption>
+							<para>Elegimos donde se va a guardar el log.</para>
+						</caption>
+						</mediaobject>
+					</figure>
+					<figure id="07">
+						<title>Pestaña Server status.</title>
+						<mediaobject>
+						<imageobject>
+							<imagedata fileref="../img/t1/a3/david/07.png" format="PNG" align="center" scale="50" />
+						</imageobject>
+						<textobject>
+							<phrase>Pestaña Server status.</phrase>
+						</textobject>
+						<caption>
+							<para>Iniciamos el servicio.</para>
+						</caption>
+						</mediaobject>
+					</figure>
+				</section>
+				<section>
+					<title>Cliente Debian 7.</title>
+					<figure id="08">
+						<title>Conexión desde Linux.</title>
+						<mediaobject>
+						<imageobject>
+							<imagedata fileref="../img/t1/a3/david/08.png" format="PNG" align="center" scale="50" />
+						</imageobject>
+						<textobject>
+							<phrase>Conexión desde Linux.</phrase>
+						</textobject>
+						<caption>
+							<para>Para realizar la conexión desde la terminal escribimos lo que se muestra en la imagen.
+							Nos mostrará la clave publica, aceptamos e ingresamos la contraseña.</para>
+						</caption>
+						</mediaobject>
+					</figure>
+					<figure id="09">
+						<title>Conexión realizada.</title>
+						<mediaobject>
+						<imageobject>
+							<imagedata fileref="../img/t1/a3/david/09.png" format="PNG" align="center" scale="50" />
+						</imageobject>
+						<textobject>
+							<phrase>Conexión realizada.</phrase>
+						</textobject>
+						<caption>
+							<para>Vemos como ha conectado.</para>
+						</caption>
+						</mediaobject>
+					</figure>
+					<figure id="10">
+						<title>Conexión realizada (visto desde el server).</title>
+						<mediaobject>
+						<imageobject>
+							<imagedata fileref="../img/t1/a3/david/10.png" format="PNG" align="center" scale="50" />
+						</imageobject>
+						<textobject>
+							<phrase>Conexión realizada (visto desde el server).</phrase>
+						</textobject>
+						<caption>
+							<para>Vemos la conexión realizada desde el servidor.</para>
+						</caption>
+						</mediaobject>
+					</figure>
+				</section>
+				<section>
+					<title>Cliente Windows 7.</title>
+					<figure id="11">
+						<title>Cliente PuTTY.</title>
+						<mediaobject>
+						<imageobject>
+							<imagedata fileref="../img/t1/a3/david/11.png" format="PNG" align="center" scale="50" />
+						</imageobject>
+						<textobject>
+							<phrase>Cliente PuTTY.</phrase>
+						</textobject>
+						<caption>
+							<para>Para realizar la conexión nos bastará con poner la IP del servidor y el puerto.</para>
+						</caption>
+						</mediaobject>
+					</figure>
+					<figure id="12">
+						<title>Clave RSA.</title>
+						<mediaobject>
+						<imageobject>
+							<imagedata fileref="../img/t1/a3/david/12.png" format="PNG" align="center" scale="50" />
+						</imageobject>
+						<textobject>
+							<phrase>Clave RSA.</phrase>
+						</textobject>
+						<caption>
+							<para>Capturamos la clave RSA y aceptamos.</para>
+						</caption>
+						</mediaobject>
+					</figure>
+					<figure id="13">
+						<title>Conexión desde PuTTY.</title>
+						<mediaobject>
+						<imageobject>
+							<imagedata fileref="../img/t1/a3/david/13.png" format="PNG" align="center" scale="50" />
+						</imageobject>
+						<textobject>
+							<phrase>Conexión desde PuTTY.</phrase>
+						</textobject>
+						<caption>
+							<para>Nos pedirá la contraseña.</para>
+						</caption>
+						</mediaobject>
+					</figure>
+					<figure id="14">
+						<title>Conexión realizada desde PuTTY.</title>
+						<mediaobject>
+						<imageobject>
+							<imagedata fileref="../img/t1/a3/david/14.png" format="PNG" align="center" scale="50" />
+						</imageobject>
+						<textobject>
+							<phrase>Conexión realizada desde PuTTY.</phrase>
+						</textobject>
+						<caption>
+							<para>Conexión establecida.</para>
+						</caption>
+						</mediaobject>
+					</figure>
+					<figure id="15">
+						<title>Conexión vista desde freeSSHd.</title>
+						<mediaobject>
+						<imageobject>
+							<imagedata fileref="../img/t1/a3/david/15.png" format="PNG" align="center" scale="50" />
+						</imageobject>
+						<textobject>
+							<phrase>Conexión vista desde freeSSHd.</phrase>
+						</textobject>
+						<caption>
+							<para>Vemos como 'remoteuser2' está conectado correctamente.</para>
+						</caption>
+						</mediaobject>
+					</figure>
+					<figure id="16">
+						<title>Contenido de 'known_hosts'.</title>
+						<mediaobject>
+						<imageobject>
+							<imagedata fileref="../img/t1/a3/david/16.png" format="PNG" align="center" scale="50" />
+						</imageobject>
+						<textobject>
+							<phrase>Contenido de 'known_hosts'.</phrase>
+						</textobject>
+						<caption>
+							<para>Comprobamos el contenido del fichero 'known_hosts'.</para>
+						</caption>
+						</mediaobject>
+					</figure>
+					<figure id="17">
+						<title>Generamos una nueva clave RSA.</title>
+						<mediaobject>
+						<imageobject>
+							<imagedata fileref="../img/t1/a3/david/17.png" format="PNG" align="center" scale="50" />
+						</imageobject>
+						<textobject>
+							<phrase>Generamos una nueva clave RSA.</phrase>
+						</textobject>
+						<caption>
+							<para>Generamos una nueva clave RSA y comprobamos la conexión y... ¡Falla!. Nos advierte de que la clave
+							 ha cambiado y la verificación ha fallado (¡Podríamos ser victimas de un ataque!). Para poder realizar 
+							 nuevamente la conexión tendremos que añadir la nueva clave al fichero 'known_hosts'.</para>
+						</caption>
+						</mediaobject>
+					</figure>
+				</section>
+		</section>
+		<section>
+			<title>Con servidor Debian 7.</title>
+			<figure id="18">
+				<title>Conexión desde Linux.</title>
+				<mediaobject>
+				<imageobject>
+					<imagedata fileref="../img/t1/a3/yeray/PARTE2/sshclient1.png" format="PNG" align="center" scale="50" />
+				</imageobject>
+				<textobject>
+					<phrase>Conexión desde Linux.</phrase>
+				</textobject>
+				<caption>
+					<para>Conexión desde cliente Linux.</para>
+				</caption>
+				</mediaobject>
+			</figure>
+		</section>
+		<section>
+			<title>Con servidor OpenSuse.</title>
+		</section>
+	</section>
+</chapter>
