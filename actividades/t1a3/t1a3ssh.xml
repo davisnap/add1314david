@@ -527,20 +527,99 @@
 		<title>7. Restricciones de uso.</title>
 		<section>
 			<title>Servidor Debian 7.</title>
-			<figure id="32">
-				<title>Aplicación abierta.</title>
-				<mediaobject>
-				<imageobject>
-					<imagedata fileref="../img/t1/a3/yeray/PARTE7/12iniciargeany.png" format="PNG" align="center" scale="50" />
-				</imageobject>
-				<textobject>
-					<phrase>Aplicación abierta.</phrase>
-				</textobject>
-				<caption>
-					<para>Aplicación funcionando desde el cliente.</para>
-				</caption>
-				</mediaobject>
-			</figure>
+			<section>
+				<title>7.2 Restricción total.</title>
+				<figure id="32">
+					<title>sshd_config.</title>
+					<mediaobject>
+					<imageobject>
+						<imagedata fileref="../img/t1/a3/yeray/PARTE7/7.2.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+					<textobject>
+						<phrase>sshd_config.</phrase>
+					</textobject>
+					<caption>
+						<para>Modificación del fichero 'sshd_config' para crear una restricción de uso para un usuario.</para>
+					</caption>
+					</mediaobject>
+				</figure>
+			</section>
+			<section>
+				<title>7.3 Restricción temporal.</title>
+				<figure id="33">
+					<title>Usuarios permitidos.</title>
+					<mediaobject>
+					<imageobject>
+						<imagedata fileref="../img/t1/a3/yeray/PARTE7/remoteuser3.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+					<textobject>
+						<phrase>Usuarios permitidos.</phrase>
+					</textobject>
+					<caption>
+						<para>Especificamos los usuarios que se pueden conectar y los que no.</para>
+					</caption>
+					</mediaobject>
+				</figure>
+				<figure id="34">
+					<title>Script.</title>
+					<mediaobject>
+					<imageobject>
+						<imagedata fileref="../img/t1/a3/yeray/PARTE7/script nuevo.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+					<textobject>
+						<phrase>Script.</phrase>
+					</textobject>
+					<caption>
+						<para>Creamos el script que limita la entrada temporal.</para>
+					</caption>
+					</mediaobject>
+				</figure>
+				<figure id="35">
+					<title>Comprobamos entrada.</title>
+					<mediaobject>
+					<imageobject>
+						<imagedata fileref="../img/t1/a3/yeray/PARTE7/conectar con remoteuser3 y deniega la entrada.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+					<textobject>
+						<phrase>Comprobamos entrada.</phrase>
+					</textobject>
+					<caption>
+						<para>Comprobamos entrada y no nos deja acceder. Funciona correctamente.</para>
+					</caption>
+					</mediaobject>
+				</figure>
+			</section>
+			<section>
+				<title>7.4 Restricción sobre aplicaciones.</title>
+				<figure id="36">
+					<title>Añadiendo usuario al grupo.</title>
+					<mediaobject>
+					<imageobject>
+						<imagedata fileref="../img/t1/a3/yeray/PARTE7/7.4.1.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+					<textobject>
+						<phrase>Añadiendo usuario al grupo.</phrase>
+					</textobject>
+					<caption>
+						<para>Añadiendo usuario 'remoteuser4' al grupo 'remoteapp'.</para>
+					</caption>
+					</mediaobject>
+				</figure>
+				<figure id="37">
+					<title>Permisos sobre Geany.</title>
+					<mediaobject>
+					<imageobject>
+						<imagedata fileref="../img/t1/a3/yeray/PARTE7/7.4.2.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+					<textobject>
+						<phrase>Permisos sobre Geany.</phrase>
+					</textobject>
+					<caption>
+						<para>Permisos sobre Geany del usuario 'remoteuser4'.</para>
+					</caption>
+					</mediaobject>
+				</figure>
+			</section>			
 		</section>
 		<section>
 			<title>Servidor OpenSuse.</title>
