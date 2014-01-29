@@ -1,0 +1,97 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Servidor de impresión: Instalación en Windows.</title>
+</head>
+<body>
+<div style='display:table-row; padding: 10px;'>
+  <div style='float: left; width=20%; padding:10px;'>
+  <img src='./files/logo.png'/>
+  </div>
+  <div style='float: left;padding:10px'>
+  <ul>
+    <li><b>M&oacute;dulo:</b> <i>Sistemas Operativos</i></li>
+    <li><b>T&iacute;tulo del trabajo</b> <i>Servidor de impresión: Instalación en Windows.</i></li>
+    <li><b>Componentes del grupo:</b> <i>David Rodríguez Herrera</i></li>
+    <li><b>Curso Acad&eacute;mico:</b> <i>2013/2014</i></li>
+    <li><b>Fecha de entrega:</b> <i>27 de Enero de 2014</i></li>
+  </ul>
+  </div>
+</div>
+<div style='float: clear;background-color: #eeeeee; border:2px solid; border-radius:10px; padding: 10px;'>
+<a href='#bloque1'>Configuración del servidor.</a> | <a href='#bloque2'>Creación y unión al dominio.</a> | <a href='#final'>Configuración del cliente.</a>
+</div>
+<h1><a id='bloque1'>Configuración del servidor.</a></h1>
+<p>Vamos a realizar una pequeña prueba en el mismo servidor para comprobar que funciona correctamente PDFCreator:</p>
+<p align="center">
+	<img src="files/01.png" alt="IP Estática" /></br>
+	En primer lugar establecemos una IP estática.
+</p>
+<p align="center">
+	<img src="files/02.png" alt="Prueba de impresión" /></br>
+	Prueba de impresión. Como vemos PDFCreator se ha instalado correctamente. Dada que la instalación es muy sencilla no se explicará en esta práctica. Basta con elegir instalación estándar y seguir el asistente (siguiente, siguiente...).
+</p>
+<p>Una vez realizada esta primera prueba comenzaremos con la instalación del rol 'Servicios de impresión y documentos':</p>
+<p align="center">
+	<img src="files/03.png" alt="Rol de impresión" /></br>
+	Seleccionamos 'Servicios de impresión y documentos'.
+</p>
+<p align="center">
+	<img src="files/04.png" alt="Servicios de rol" /></br>
+	Seleccionamos 'Servidor de impresión' e 'Impresión en Internet'.
+</p>
+<p align="center">
+	<img src="files/05.png" alt="Características del rol" /></br>
+	Como hemos seleccionado 'Impresión en Internet' nos pide instalar las siguientes características. Aceptamos.
+</p>
+<p>Una vez instalado el rol en el explorador de Windows escribimos el nombre de nuestro equipo o la IP junto con "\\" como muestra la imagen. <b>Ejemplo: \\172.16.109.200</b></p>
+<p align="center">
+	<img src="files/06.png" alt="Compartir impresora" /></br>
+	Clicamos sobre 'Ver impresoras remotas'.
+</p>
+<p align="center">
+	<img src="files/07.png" alt="Propiedades compartir" /></br>
+	Clic derecho sobre PDFCreator, propiedades y seleccionamos 'Compartir esta impresora' y 'Mostrar lista en el directorio' para que nos aparezca más adelante al buscarla.
+</p>
+<p align="center">
+	<img src="files/08.png" alt="Impresora compartida" /></br>
+	Vemos que se ha compartido correctamente.
+</p>
+<h1><a id='bloque2'>Creación y unión al dominio.</a></h1>
+<p>Ahora comentamos por encima la creación del dominio y la unión a este pues ya se ha explicado en prácticas anteriores.</p>
+<p align="center">
+	<img src="files/09.png" alt="dcpromo" /></br>
+	Instalamos dcpromo y le damos un nombre al dominio.
+</p>
+<p align="center">
+	<img src="files/10.png" alt="Cliente dominio" /></br>
+	Creamos el cliente en el dominio.
+</p>
+<p align="center">
+	<img src="files/11.png" alt="IP cliente" /></br>
+	Ahora desde el cliente establecemos la IP estática y en DNS apuntamos al servidor para poder unirnos a el.
+</p>
+<p align="center">
+	<img src="files/12.png" alt="Unión al dominio" /></br>
+	Nos unimos al dominio.
+</p>
+<h1><a id='final'>Configuración del cliente.</a></h1>
+<p>Ahora accederemos a la impresora a través del navegador desde el cliente:</p>
+<p align="center">
+	<img src="files/13.png" alt="Conectando desde el navegador" /></br>
+	Accedemos a la impresora escribiendo en el navegador http://ip del servidor o nombre/printers/. Vemos nuestra impresora. Clicamos sobre ella.
+</p>
+<p align="center">
+	<img src="files/14.png" alt="Pausa" /></br>
+	Pausamos las impresiones.
+</p>
+<p align="center">
+	<img src="files/15.png" alt="Impresión" /></br>
+	Ahora creamos un texto de prueba, le damos a imprimir, 'Buscar impresora...', seleccionamos el servidor y 'Buscar ahora'. Aparecerá nuestra impresora como vemos en la imagen.
+</p>
+<p align="center">
+	<img src="files/16.png" alt="Documento en pausa" /></br>
+	Vemos que se ha realizado correctamente toda la instalación y configuración pues aparece el documento en pausa que queremos imprimir.
+</p>
+</body>
+</html>
